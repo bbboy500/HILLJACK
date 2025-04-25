@@ -56,32 +56,32 @@
     }
 
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
       padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .gallery img {
-      width: 300px;
-      border-radius: 16px;
-      border: 4px solid #ff6600;
-      box-shadow: 0 0 15px #ff6600aa;
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s ease forwards;
       opacity: 0;
       transform: translateY(30px);
-      animation: fadeIn 1s ease forwards;
     }
 
-    .gallery img:nth-child(1) { animation-delay: 0.2s; }
-    .gallery img:nth-child(2) { animation-delay: 0.4s; }
-    .gallery img:nth-child(3) { animation-delay: 0.6s; }
-    .gallery img:nth-child(4) { animation-delay: 0.8s; }
-    .gallery img:nth-child(5) { animation-delay: 1.0s; }
-    .gallery img:nth-child(6) { animation-delay: 1.2s; }
-    .gallery img:nth-child(7) { animation-delay: 1.4s; }
-    .gallery img:nth-child(8) { animation-delay: 1.6s; }
-    .gallery img:nth-child(9) { animation-delay: 1.8s; }
+    .gallery-item:nth-child(1) { animation-delay: 0.2s; }
+    .gallery-item:nth-child(2) { animation-delay: 0.4s; }
+    .gallery-item:nth-child(3) { animation-delay: 0.6s; }
+    .gallery-item:nth-child(4) { animation-delay: 0.8s; }
+    .gallery-item:nth-child(5) { animation-delay: 1.0s; }
+    .gallery-item:nth-child(6) { animation-delay: 1.2s; }
+    .gallery-item:nth-child(7) { animation-delay: 1.4s; }
+    .gallery-item:nth-child(8) { animation-delay: 1.6s; }
+    .gallery-item:nth-child(9) { animation-delay: 1.8s; }
 
     @keyframes fadeIn {
       to {
@@ -90,13 +90,20 @@
       }
     }
 
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 16px;
+      border: 4px solid #ff6600;
+      box-shadow: 0 0 15px #ff6600aa;
+    }
+
     .quote {
-      font-size: 2rem;
-      font-style: italic;
-      margin: 3rem auto;
-      max-width: 800px;
+      font-size: 1.2rem;
+      margin-top: 1rem;
       color: #ffcc00;
       text-shadow: 1px 1px 3px #000;
+      max-width: 90%;
     }
 
     .spotlight {
@@ -150,19 +157,42 @@
 </section>
 
 <section class="gallery">
-  <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021332.png" alt="Hilljack 1" />
-  <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021335.png" alt="Hilljack 2" />
-  <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021336.png" alt="Hilljack 3" />
-  <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021337.png" alt="Hilljack 4" />
-  <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021338.jpg" alt="Hilljack 5" />
-  <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021339.jpg" alt="Hilljack 6" />
-  <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021340.jpg" alt="Hilljack 7" />
-  <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021344.png" alt="Hilljack 8" />
-  <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021346.jpg" alt="Hilljack 9" />
-</section>
-
-<section class="quote">
-  “Ain’t nothin’ stronger than Hilljack loyalty — except maybe that moonshine batch from ‘96.”
+  <div class="gallery-item">
+    <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021332.png" alt="Hilljack 1" />
+    <div class="quote">“The official memecoin of moonshine, mullets, and mischief. Built for degenerates with heart. $HILL”</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021335.png" alt="Hilljack 2" />
+    <div class="quote">“Ain’t nothin’ stronger than Hilljack loyalty — except maybe that moonshine batch from ‘96.”</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021336.png" alt="Hilljack 3" />
+    <div class="quote">“Buy the dip? I AM the dip. Hilljackin' straight to Valhalla.”</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021337.png" alt="Hilljack 4" />
+    <div class="quote">“Some chase Lambo dreams. We chase raccoons off the porch — then buy more HILL.”</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021338.jpg" alt="Hilljack 5" />
+    <div class="quote">“My wallet’s emptier than my cousin’s GED score, but I’m still all in.”</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021339.jpg" alt="Hilljack 6" />
+    <div class="quote">“Other coins go to the moon. Hilljack shoots past it with a bottle rocket taped to a lawn chair.”</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021340.jpg" alt="Hilljack 7" />
+    <div class="quote">“They said we couldn’t launch a memecoin. So we did. While barefoot. In the rain.”</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021344.png" alt="Hilljack 8" />
+    <div class="quote">“We don’t read charts — we read gut feelings and chicken scratch from Uncle Earl.”</div>
+  </div>
+  <div class="gallery-item">
+    <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021346.jpg" alt="Hilljack 9" />
+    <div class="quote">“If you ain’t buyin’ HILL, you probably butter your cornbread with a spoon.”</div>
+  </div>
 </section>
 
 <section class="spotlight">
@@ -171,17 +201,13 @@
   <p>One tooth. One goal. One coin to rule ‘em all. This is the face of the future.</p>
 </section>
 
-<section class="quote">
-  “Buy the dip? I AM the dip. Hilljackin' straight to Valhalla.”
-</section>
-
 <section class="links">
   <a href="https://x.com/REALHILLJACK" target="_blank">🐦 Follow on X</a>
   <a href="https://t.me/realhilljack" target="_blank">📣 Join Telegram</a>
 </section>
 
 <footer>
-  © 2025 Hilljack Coin. All rights reserved. Built by moon junkies.
+  © 2025 Hilljack Coin. All rights reserved. Built by moonshine and a computer.
 </footer>
 
 </body>
