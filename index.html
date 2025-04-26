@@ -22,21 +22,23 @@
       100% {background-position: 0% 50%;}
     }
     header {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
       background: #000000cc;
-      padding: 1.5rem 1rem 1rem;
+      padding: 1rem 2rem;
       box-shadow: 0 0 20px #ff6600;
       position: sticky;
       top: 0;
       z-index: 1000;
+      flex-wrap: wrap;
     }
     .nav-left, .nav-right {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      height: 100%;
     }
     .nav-left a, .nav-right a {
       background: #ff3300;
@@ -54,8 +56,12 @@
     .nav-left a:hover, .nav-right a:hover {
       transform: scale(1.1);
     }
-    h1 {
-      text-align: center;
+    .header-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header-center h1 {
       font-size: 4.2rem;
       color: #ff9900;
       text-shadow: 2px 2px 5px #000;
@@ -63,7 +69,6 @@
     }
     .ca-copy {
       text-align: center;
-      margin: 0.5rem 0 1rem;
     }
     .ca-copy button {
       background: #ff3300;
@@ -97,7 +102,7 @@
       <a href="https://x.com/REALHILLJACK" target="_blank">🐦 X</a>
       <a href="#" target="_blank">💰 Buy</a>
     </div>
-    <div>
+    <div class="header-center">
       <h1>HILLJACK</h1>
       <div class="ca-copy">
         <button onclick="copyCA()">📋 Copy Contract Address</button>
