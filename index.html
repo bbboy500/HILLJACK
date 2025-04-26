@@ -93,6 +93,26 @@
       text-shadow: 1px 1px 3px #000;
       max-width: 90%;
     }
+    .small-buttons {
+      margin-top: 0.5rem;
+    }
+    .small-buttons a, .small-buttons button {
+      display: inline-block;
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      background-color: #ff3300;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 0 10px #ff3300aa;
+      transition: transform 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .small-buttons a:hover, .small-buttons button:hover {
+      transform: scale(1.1);
+    }
     .spotlight {
       background: linear-gradient(to right, #330000, #111);
       color: #fff;
@@ -135,6 +155,13 @@
 
 <header>
   <h1>HILLJACK</h1>
+  <section class="links">
+    <a href="https://x.com/REALHILLJACK" target="_blank">🐦 Follow on X</a>
+    <a href="https://t.me/realhilljack" target="_blank">📣 Join Telegram</a>
+    <a href="#" id="buyLinkTop" target="_blank">💰 Buy on Raydium (Coming Soon)</a>
+    <a href="#" id="dexLinkTop" target="_blank">📈 View Chart (Coming Soon)</a>
+    <button class="button" onclick="copyCA()">📋 Copy Contract Address (Coming Soon)</button>
+  </section>
 </header>
 
 <section>
@@ -142,42 +169,88 @@
 </section>
 
 <section class="gallery">
-  <div class="gallery-item">
+  <!-- START GALLERY ITEMS -->
+<div class="gallery-item">
     <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021332.png" alt="Hilljack 1" />
     <div class="quote">“The official memecoin of moonshine, mullets, and mischief. Built for degenerates with heart. $HILL”</div>
+    <div class="small-buttons">
+      <a href="#" id="buyLink1" target="_blank">💰 Buy</a>
+      <button onclick="copyCA()">📋 Copy CA</button>
+    </div>
   </div>
+
   <div class="gallery-item">
     <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021335.png" alt="Hilljack 2" />
     <div class="quote">“Ain’t nothin’ stronger than Hilljack loyalty — except maybe that moonshine batch from ‘96.”</div>
+    <div class="small-buttons">
+      <a href="#" id="buyLink2" target="_blank">💰 Buy</a>
+      <button onclick="copyCA()">📋 Copy CA</button>
+    </div>
   </div>
+
   <div class="gallery-item">
     <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021336.png" alt="Hilljack 3" />
     <div class="quote">“Buy the dip? I AM the dip. Hilljackin' straight to Valhalla.”</div>
+    <div class="small-buttons">
+      <a href="#" id="buyLink3" target="_blank">💰 Buy</a>
+      <button onclick="copyCA()">📋 Copy CA</button>
+    </div>
   </div>
+
   <div class="gallery-item">
     <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021337.png" alt="Hilljack 4" />
     <div class="quote">“Some chase Lambo dreams. We chase raccoons off the porch — then buy more HILL.”</div>
+    <div class="small-buttons">
+      <a href="#" id="buyLink4" target="_blank">💰 Buy</a>
+      <button onclick="copyCA()">📋 Copy CA</button>
+    </div>
   </div>
+
   <div class="gallery-item">
     <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021338.jpg" alt="Hilljack 5" />
     <div class="quote">“My wallet’s emptier than my cousin’s GED score, but I’m still all in.”</div>
+    <div class="small-buttons">
+      <a href="#" id="buyLink5" target="_blank">💰 Buy</a>
+      <button onclick="copyCA()">📋 Copy CA</button>
+    </div>
   </div>
+
   <div class="gallery-item">
     <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021339.jpg" alt="Hilljack 6" />
     <div class="quote">“Other coins go to the moon. Hilljack shoots past it with a bottle rocket taped to a lawn chair.”</div>
+    <div class="small-buttons">
+      <a href="#" id="buyLink6" target="_blank">💰 Buy</a>
+      <button onclick="copyCA()">📋 Copy CA</button>
+    </div>
   </div>
+
   <div class="gallery-item">
     <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021340.jpg" alt="Hilljack 7" />
     <div class="quote">“They said we couldn’t launch a memecoin. So we did. While barefoot. In the rain.”</div>
+    <div class="small-buttons">
+      <a href="#" id="buyLink7" target="_blank">💰 Buy</a>
+      <button onclick="copyCA()">📋 Copy CA</button>
+    </div>
   </div>
+
   <div class="gallery-item">
     <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021344.png" alt="Hilljack 8" />
     <div class="quote">“We don’t read charts — we read gut feelings and chicken scratch from Uncle Earl.”</div>
+    <div class="small-buttons">
+      <a href="#" id="buyLink8" target="_blank">💰 Buy</a>
+      <button onclick="copyCA()">📋 Copy CA</button>
+    </div>
   </div>
+
   <div class="gallery-item">
     <img src="https://raw.githubusercontent.com/bbboy500/HILLJACK/main/1000021346.jpg" alt="Hilljack 9" />
     <div class="quote">“If you ain’t buyin’ HILL, you probably butter your cornbread with a spoon.”</div>
+    <div class="small-buttons">
+      <a href="#" id="buyLink9" target="_blank">💰 Buy</a>
+      <button onclick="copyCA()">📋 Copy CA</button>
+    </div>
   </div>
+
 </section>
 
 <section class="spotlight">
@@ -189,8 +262,8 @@
 <section class="links">
   <a href="https://x.com/REALHILLJACK" target="_blank">🐦 Follow on X</a>
   <a href="https://t.me/realhilljack" target="_blank">📣 Join Telegram</a>
-  <a href="#" id="buyLink" target="_blank">💰 Buy on Raydium (Coming Soon)</a>
-  <a href="#" id="dexLink" target="_blank">📈 View Chart (Coming Soon)</a>
+  <a href="#" id="buyLinkBottom" target="_blank">💰 Buy on Raydium (Coming Soon)</a>
+  <a href="#" id="dexLinkBottom" target="_blank">📈 View Chart (Coming Soon)</a>
   <button class="button" onclick="copyCA()">📋 Copy Contract Address (Coming Soon)</button>
 </section>
 
@@ -200,7 +273,7 @@
 
 <script>
 function copyCA() {
-  const ca = "COMING SOON"; // Replace after launch
+  const ca = "COMING SOON"; // Replace this with your real CA after launch
   navigator.clipboard.writeText(ca).then(function() {
     alert('Copied Contract Address: ' + ca);
   }, function(err) {
