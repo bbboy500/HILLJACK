@@ -23,6 +23,7 @@
     }
     header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       background: #000000cc;
@@ -31,21 +32,21 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      flex-wrap: wrap;
     }
-    header h1 {
+    .header-title {
       flex: 1 0 100%;
       text-align: center;
       font-size: 2.5rem;
-      margin: 0.25rem 0;
       color: #ff9900;
       text-shadow: 2px 2px 5px #000;
+      margin: 0.25rem 0 0;
     }
-    .nav-left, .nav-right {
+    .nav-group {
       display: flex;
       gap: 0.5rem;
+      flex-wrap: wrap;
     }
-    .nav-left a, .nav-right a {
+    .nav-group a, .nav-group button {
       background: #ff3300;
       color: white;
       padding: 0.4rem 0.8rem;
@@ -53,9 +54,11 @@
       text-decoration: none;
       font-size: 1rem;
       box-shadow: 0 0 10px #ff6600aa;
+      border: none;
+      cursor: pointer;
       transition: transform 0.2s ease;
     }
-    .nav-left a:hover, .nav-right a:hover {
+    .nav-group a:hover, .nav-group button:hover {
       transform: scale(1.1);
     }
     .ca-copy {
@@ -76,61 +79,8 @@
       transform: scale(1.05);
     }
     section {
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 1rem;
       text-align: center;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    .gallery-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 16px;
-      border: 4px solid #ff6600;
-      box-shadow: 0 0 15px #ff6600aa;
-    }
-    .quote {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      color: #ffcc00;
-      text-shadow: 1px 1px 3px #000;
-      max-width: 90%;
-    }
-    .small-buy-button {
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: #ff3300;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      box-shadow: 0 0 10px #ff6600aa;
-      transition: transform 0.2s ease;
-    }
-    .small-buy-button:hover {
-      transform: scale(1.1);
-    }
-    .spotlight {
-      background: linear-gradient(to right, #330000, #111);
-      color: white;
-      padding: 4rem 1rem;
-      box-shadow: inset 0 0 50px #00000088;
-    }
-    .spotlight img {
-      width: 300px;
-      border-radius: 50%;
-      border: 6px solid #ff3300;
-      box-shadow: 0 0 30px #ff3300aa;
     }
     footer {
       padding: 2rem;
@@ -143,27 +93,34 @@
 </head>
 <body>
   <header>
-    <div class="nav-left">
+    <div class="nav-group">
       <a href="https://x.com/REALHILLJACK" target="_blank">🐦 X</a>
       <a href="https://t.me/realhilljack" target="_blank">📣 Telegram</a>
     </div>
-    <h1>HILLJACK</h1>
-    <div class="nav-right">
-      <a href="#" id="buyLinkTop" target="_blank">💰 Buy</a>
-      <a href="#" id="chartLinkTop" target="_blank">📈 Chart</a>
+    <div class="header-title">HILLJACK</div>
+    <div class="nav-group">
+      <a href="#" target="_blank">💰 Buy</a>
+      <a href="#" target="_blank">📈 Chart</a>
     </div>
-  </header>  <div class="ca-copy">
+  </header>
+  <div class="ca-copy">
     <button onclick="copyCA()">📋 Copy Contract Address</button>
-  </div>  <section>
-    <p>The official memecoin of moonshine, mullets, and mischief. Built for degenerates with heart. $HILL</p>
-  </section>  <!-- GALLERY, SPOTLIGHT, FOOTER GOES HERE -->  <footer>
+  </div>
+  <section>
+    <p style="margin-top: 0.5rem;">
+      The official memecoin of moonshine, mullets, and mischief. Built for degenerates with heart. $HILL
+    </p>
+  </section>
+  <footer>
     © 2025 Hilljack Coin. All rights reserved. Built by moonshine and a computer.
-  </footer>  <script>
+  </footer>
+  <script>
     function copyCA() {
       const ca = "COMING SOON";
       navigator.clipboard.writeText(ca).then(() => {
         alert("Copied Contract Address: " + ca);
       });
     }
-  </script></body>
+  </script>
+</body>
 </html>
