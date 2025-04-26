@@ -34,26 +34,28 @@
     }
     .nav-left, .nav-right {
       display: flex;
+      flex-direction: column;
       gap: 0.5rem;
     }
     .nav-left a, .nav-right a {
       background: #ff3300;
       color: white;
-      padding: 0.4rem 0.8rem;
+      padding: 0.3rem 0.6rem;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 1rem;
-      box-shadow: 0 0 10px #ff6600aa;
+      font-size: 0.85rem;
+      box-shadow: 0 0 8px #ff6600aa;
       border: none;
       cursor: pointer;
       transition: transform 0.2s ease;
+      text-align: center;
     }
     .nav-left a:hover, .nav-right a:hover {
       transform: scale(1.1);
     }
     h1 {
       text-align: center;
-      font-size: 3.5rem;
+      font-size: 4rem;
       color: #ff9900;
       text-shadow: 2px 2px 5px #000;
       margin: 0.25rem 0 0.5rem;
@@ -100,7 +102,7 @@
         <button onclick="copyCA()">📋 Copy Contract Address</button>
       </div>
     </div>
-    <div class="nav-right" style="justify-content: flex-end;">
+    <div class="nav-right">
       <a href="https://t.me/realhilljack" target="_blank">📣 Telegram</a>
       <a href="#" target="_blank">📈 Chart</a>
     </div>
