@@ -23,30 +23,22 @@
     }
     header {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
       background: #000000cc;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1rem 0;
       box-shadow: 0 0 20px #ff6600;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    .header-title {
-      flex: 1 0 100%;
-      text-align: center;
-      font-size: 2.5rem;
-      color: #ff9900;
-      text-shadow: 2px 2px 5px #000;
-      margin: 0.25rem 0 0;
-    }
-    .nav-group {
+    .nav-pair {
       display: flex;
       gap: 0.5rem;
-      flex-wrap: wrap;
     }
-    .nav-group a, .nav-group button {
+    .nav-pair a, .nav-pair button {
       background: #ff3300;
       color: white;
       padding: 0.4rem 0.8rem;
@@ -58,8 +50,14 @@
       cursor: pointer;
       transition: transform 0.2s ease;
     }
-    .nav-group a:hover, .nav-group button:hover {
+    .nav-pair a:hover, .nav-pair button:hover {
       transform: scale(1.1);
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #ff9900;
+      text-shadow: 2px 2px 5px #000;
+      margin: 0;
     }
     .ca-copy {
       text-align: center;
@@ -93,12 +91,12 @@
 </head>
 <body>
   <header>
-    <div class="nav-group">
+    <div class="nav-pair">
       <a href="https://x.com/REALHILLJACK" target="_blank">🐦 X</a>
       <a href="https://t.me/realhilljack" target="_blank">📣 Telegram</a>
     </div>
-    <div class="header-title">HILLJACK</div>
-    <div class="nav-group">
+    <h1>HILLJACK</h1>
+    <div class="nav-pair">
       <a href="#" target="_blank">💰 Buy</a>
       <a href="#" target="_blank">📈 Chart</a>
     </div>
